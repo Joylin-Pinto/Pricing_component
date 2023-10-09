@@ -1,0 +1,186 @@
+:root{
+    --gradient:   hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+    --body-font-size:15px;
+    --body-font: 'Montserrat', sans-serif;;
+    --font-medium: 500 ;
+    --font-semi-bold: 600;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+    body {
+        overflow-y: scroll;
+        box-sizing: border-box; 
+        background-color: var(--very-light-grayish-blue);
+        background-image: url("images/bg-top.svg"), url("images/bg-bottom.svg");
+        background-repeat: no-repeat, no-repeat;  
+        font-family: var(--body-font);
+        background-size: 25%, 26.5%;
+        background-position:
+        top 0 right 0rem,
+        bottom -4.7rem left -1.9rem;
+        margin: 4rem 2rem;
+      }
+      .main{
+        height:fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 50px;
+      }
+      .toggle-section{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+      .toggle-section #toggle-btn{
+        display: flex;
+        flex-direction: row;
+        width: 2.3rem;
+        height: 1.2rem;
+        border-radius: 20px;
+        background: linear-gradient(var(--gradient));
+        padding: 3px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .toggle-section #toggle-btn:hover{
+        cursor: pointer;
+        opacity: 0.5;
+    }
+      .toggle-section .circle{
+        background-color: #ffffff;
+        width: 1.4rem;
+        height:1.2rem;
+        border-radius: 50%;
+      }
+      .card-container{
+       width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly; 
+      }
+      .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        width: 45%; 
+        gap: 5px;
+        padding: 20px 45px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+      }
+      .card .heading{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .card .heading p:first-of-type{
+        color: var(--dark-grayish-blue);
+        text-align: center;
+      }
+      .card .heading p:last-of-type{
+        font-size: 3rem;
+        color: var(--very-dark-grayish-blue);
+      }
+      .card ul{
+        width: 100%;
+        list-style: none;
+        padding-block: 20px; 
+        text-align: center;
+      }
+      .card ul li{ 
+        border: solid var(--light-grayish-blue) 1px ;
+        border-inline: none;
+        padding-block: 15px;
+        color: var(--dark-grayish-blue);
+      }
+      .card ul li:nth-child(2){
+        border: none;
+      }
+      .card button{
+        width: 100%;
+        padding: 15px ;
+        border: none;
+        outline: none;
+        background: linear-gradient(var(--gradient));
+        border-radius: 5px;
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      .card button:hover{
+        cursor: pointer;
+        background: #ffffff;
+        border: solid hsl(237, 63%, 64%) 1px;
+        color: hsl(237, 63%, 64%);
+      }
+
+      .card:nth-child(2){
+        background: linear-gradient(145deg,var(--gradient));
+        color: #ffffff;
+        transform: scale(1.1);
+        padding-block: 30px;
+      }
+      .card:nth-child(2) .heading p,.card:nth-child(2) ul li{
+        color: #ffffff;
+      }
+      .card:nth-child(2) ul li{
+      border: solid var(--very-light-grayish-blue) 1px ;
+      border-inline: none;
+      }
+      .card:nth-child(2) ul li:nth-child(2){
+        border: none;
+      }
+      .card:nth-child(2) button{
+        background: #ffffff;
+        color: hsl(237, 63%, 64%);
+      } 
+      .card:nth-child(2) button:hover{
+        background: transparent;
+        border-color: #ffffff;
+        color: #ffffff;
+      } 
+
+      @media (min-width:100px) and (max-width:375px) {
+        body { 
+            background-image: url("images/bg-top.svg"), url("images/bg-bottom.svg");
+            background-repeat: no-repeat, no-repeat;
+            background-size: 20%, 20%;
+            background-position:
+            top 0 right -1rem,
+            bottom -44.7rem left -1.9rem;
+          }
+          .main{
+            gap: 20px;
+          }
+          .card-container{
+            width: 90%;
+            flex-direction: column; 
+            gap: 20px;
+          }
+          .card{
+            width: 90%;
+            padding: 10%;
+          }
+          .card:nth-child(2){
+            transform: scale(1);
+          }
+          .card .heading{
+            height: 100px;
+        }
+    }
